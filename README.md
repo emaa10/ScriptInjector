@@ -29,12 +29,13 @@ For educational purposes only.
 5. Setup port forwarding or serveo.net/ngrok to stay anonymous
     1. forward port 80 and 22 (http and ssh)
     2. create a no-ip or a subdomain of your port-forwarding service
+    3. if you're using serveo, you might need to generate a second ssh-key you don't move out of the .ssh directory and connect your gmail account
 6. Create an ssh config file for your victim
     1. use the template "config" file
     2. if you're using serveo.net to forward your IP, use the "config_serveo" template
         - since serveo forwards IPs using ssh, you need to configure ProxyJump for serveo.
         - I recommend serveo because of this, it keeps your connection secure
-        - You need to generate a hostname (see the launch_serveo.txt file for serveo) and just put it into "<hostname>" in your config file
+        - You need to generate a hostname (see the launch_serveo.txt file for serveo) and just put it into "your_hostname" in your config file
     3. move your config file into /var/www/html/
 7. Start serveo (or a different port forwarding service)
     - See the launch_serveo.txt file for 2 commands to forward ssh and http to your_hostname.serveo.net
