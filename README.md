@@ -38,6 +38,7 @@ For educational purposes only.
     3. move your config file into /var/www/html/
 7. Start serveo (or a different port forwarding service)
     - See the launch_serveo.txt file for 2 commands to forward ssh and http to your_hostname.serveo.net
+    - You can use screen to start multiple serveo forwarding simultaneously
 8. Create folders and the input.txt
     ```
     touch /var/www/html/input.txt
@@ -49,9 +50,3 @@ For educational purposes only.
     ```
 9. Get the victim to open the download.bat
     - That's your part. There are many options: Using a rubberducky script or converting the bat file into an executable.
-
-
-- HTML.sh mit screen und serveo
-- run download.bat mit exe oder rubber ducky
-- launch_serveo.txt
-- alles noch in vm testen
