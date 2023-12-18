@@ -1,0 +1,2 @@
+ssh -R your_hostname:22:localhost:22 serveo.net
+ssh -R your_hostname:80:localhost:80 serveo.net

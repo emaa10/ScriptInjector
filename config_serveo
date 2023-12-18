@@ -1,6 +1,6 @@
 Host serveo.net
   StrictHostKeyChecking no
 
-Host <hostname>
+Host your_hostname
   StrictHostKeyChecking no
   ProxyJump serveo.net

