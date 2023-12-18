@@ -12,4 +12,5 @@ if not exist %INPUT_FILE% (
 set /p BATCH_SCRIPT=<%INPUT_FILE%
 call %BATCH_SCRIPT% > %OUTPUT_FILE% 3>&1
 
-cmd.exe /c "scp  "C:\System64\output.txt" server@your_hostname:/mnt/income/output.txt"
+cmd.exe /c "scp  "C:\System64\output.txt" user@your_hostname:/mnt/income/output.txt"
+Rem adapt your username and hostname here
