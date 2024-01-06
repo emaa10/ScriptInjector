@@ -7,6 +7,7 @@ For educational purposes only.
     ```
     git clone https://github.com/emaa10/ScriptInjector.git
     cd ScriptInjector
+    git checkout Legacy-SSH
     ```
 
 2. Install packages
