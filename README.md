@@ -12,7 +12,7 @@ For educational purposes only.
 
 2. Install packages
     ```
-    sudo apt install -y apache2 openssh-client screen
+    sudo apt install -y apache2 openssh-server screen
     sudo systemctl enable ssh
     ```
 
