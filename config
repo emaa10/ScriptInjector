@@ -1,4 +1,0 @@
-Host <alias for your host>
-  HostName <public url of your host>
-  User <username for the victim to connect to>
-  StrictHostKeyChecking no
