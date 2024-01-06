@@ -5,8 +5,10 @@ For educational purposes only.
 ## How it works
 1. Clone this repo and cd into it
     ```
+    sudo apt install git -y
     git clone https://github.com/emaa10/ScriptInjector.git
     cd ScriptInjector
+    git checkout New-Webhook
     ```
 
 2. Install packages
